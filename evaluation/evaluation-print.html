@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scarborough Beach Surf School — Website &amp; Digital Presence Review</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c1f2c; --ink-soft:#3a4b57; --sea:#0a7ea4; --sea-deep:#075f7d;
+  --sand:#f6f1e7; --sun:#ffc83d; --foam:#ffffff; --line:#e6ded0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#eef1f3;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.display{font-family:Archivo,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:var(--sea)}
+
+/* ===== Print toolbar (screen only) ===== */
+.toolbar{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;
+  padding:12px 22px;font-size:.9rem}
+.toolbar .lbl{display:flex;align-items:center;gap:10px;font-weight:500;color:#cfe0e8}
+.toolbar .lbl b{font-family:Archivo;color:#fff;font-weight:700}
+.toolbar button{font-family:Archivo;font-weight:700;background:var(--sun);color:#1b1300;border:0;border-radius:999px;
+  padding:10px 22px;cursor:pointer;font-size:.92rem;transition:.18s}
+.toolbar button:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(255,200,61,.4)}
+
+/* ===== Page sheet ===== */
+.sheet{max-width:820px;margin:26px auto;background:#fff;padding:64px 70px;box-shadow:0 12px 40px rgba(12,31,44,.14)}
+
+/* ===== Masthead ===== */
+.mast{border-bottom:3px solid var(--ink);padding-bottom:22px;margin-bottom:30px}
+.mast .brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.mast .mark{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--sea),var(--sun));display:grid;place-items:center;color:#fff;font-size:1.3rem}
+.mast .brand b{font-family:Archivo;font-weight:900;font-size:1.05rem;line-height:1.2}
+.mast .brand small{display:block;font-weight:500;font-size:.68rem;letter-spacing:.16em;color:var(--sea);text-transform:uppercase}
+.mast h1{font-size:2.15rem;font-weight:900;max-width:20ch}
+.mast .sub{color:var(--ink-soft);font-size:1.02rem;margin-top:12px;font-style:italic;max-width:60ch}
+.mast .meta{margin-top:16px;font-size:.85rem;color:var(--ink-soft);letter-spacing:.02em}
+
+/* ===== Typography ===== */
+h2{font-size:1.5rem;font-weight:900;margin:42px 0 6px;padding-top:14px;border-top:1px solid var(--line)}
+h2:first-of-type{border-top:0;padding-top:0}
+h3{font-size:1.12rem;font-weight:700;margin:24px 0 6px;color:var(--sea-deep)}
+p{margin:10px 0;color:#21333f}
+ul,ol{margin:10px 0 10px 22px}
+li{margin:6px 0;color:#21333f}
+strong,b{color:var(--ink)}
+.lead-note{background:var(--sand);border-left:4px solid var(--sun);padding:16px 20px;border-radius:0 10px 10px 0;margin:18px 0;font-size:1.02rem}
+
+/* ===== Tables ===== */
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.88rem}
+th{background:var(--ink);color:#fff;text-align:left;font-family:Archivo;font-weight:700;padding:9px 12px;font-size:.82rem;letter-spacing:.02em}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#21333f}
+tr:nth-child(even) td{background:#faf7f0}
+td b{color:var(--ink)}
+.flag{color:#b4231a;font-weight:700}
+
+/* ===== Stat band ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.stats .s{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.stats .s b{font-family:Archivo;display:block;font-size:1.6rem;color:var(--sea-deep);line-height:1}
+.stats .s span{font-size:.76rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;display:block;margin-top:6px}
+
+/* ===== Footer ===== */
+.docfoot{margin-top:46px;border-top:3px solid var(--ink);padding-top:18px;font-size:.82rem;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+.avoid-break{break-inside:avoid;page-break-inside:avoid}
+
+/* ===== PRINT ===== */
+@media print{
+  @page{size:A4;margin:16mm 15mm}
+  body{background:#fff}
+  .toolbar{display:none}
+  .sheet{max-width:none;margin:0;padding:0;box-shadow:none}
+  h2{page-break-after:avoid;break-after:avoid}
+  h3{page-break-after:avoid;break-after:avoid}
+  table,figure,.stats,.lead-note{page-break-inside:avoid;break-inside:avoid}
+  tr{page-break-inside:avoid;break-inside:avoid}
+  thead{display:table-header-group}
+  a{color:var(--ink);text-decoration:none}
+  .mast h1{font-size:1.9rem}
+  /* Keep the brand colours in print */
+  th{background:var(--ink) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .stats .s,.lead-note,tr:nth-child(even) td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .mast .mark{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="lbl"><b>Surf School Evaluation</b> · ready to print or save as PDF</span>
+  <button onclick="window.print()">⎙ Print / Save as PDF</button>
+</div>
+
+<div class="sheet">
+
+  <!-- Masthead -->
+  <header class="mast">
+    <div class="brand">
+      <span class="mark">🌊</span>
+      <div><b>Scarborough Beach Surf School</b><small>Surf School · Est. 1986</small></div>
+    </div>
+    <h1>Website &amp; Digital Presence Review</h1>
+    <p class="sub">An independent review of the current website, booking flow, search and AI visibility, and wider online presence — with the range of improvements available.</p>
+    <p class="meta">Site reviewed: surfschool.com · June 2026</p>
+  </header>
+
+  <!-- At a glance -->
+  <h2>At a glance</h2>
+  <div class="stats avoid-break">
+    <div class="s"><b>5.0★</b><span>512 Google reviews</span></div>
+    <div class="s"><b>4.9★</b><span>195 Tripadvisor</span></div>
+    <div class="s"><b>1986</b><span>Operating since</span></div>
+    <div class="s"><b>~$20/yr</b><span>Running cost after rebuild</span></div>
+  </div>
+  <ul>
+    <li>The business is considerably stronger than its current website. Reputation is outstanding — <b>5.0 stars from 512 Google reviews</b> and <b>4.9 stars from 195 Tripadvisor reviews</b> — alongside genuine heritage as a surf school operating since <b>1986</b>.</li>
+    <li>The site runs on <b>WordPress with the WPBakery page builder and a caching plugin</b>. This is the main reason it feels dated and loads slowly; most of the running cost is tied to keeping that stack going.</li>
+    <li><b>Bookings and payments run on TuriTop</b>, a third-party system independent of WordPress. It can move to any new site unchanged, so a rebuild carries <b>no risk to bookings or payments</b>, and the existing booking dashboard stays exactly as it is.</li>
+    <li>The booking calendar currently <b>loads only after a visitor interacts with the page</b>, and there is <b>no clear "Book" button on the individual lesson pages</b> — so the path from reading about a lesson to booking it is longer than it needs to be.</li>
+    <li>One core lesson page (<b>Level 2</b>) is currently set to <span class="flag">"noindex,"</span> meaning it does not appear in Google at all.</li>
+    <li>The exceptional review volume is <b>not reflected in search results</b>, because the site carries <b>no review, FAQ or product structured data</b>. This is the single largest untapped opportunity for both Google and AI-answer visibility.</li>
+    <li>Wider presence is <b>uneven</b>: Google and Tripadvisor are strong; social is fragmented (two Instagram handles, a dormant Twitter/X, a YouTube channel inactive for ~3 years); and there is <b>no presence on experience/gift marketplaces</b>.</li>
+    <li>A meaningful amount of <b>manual admin</b> sits behind each booking (run sheet, confirmation emails, day-before reminders). Much of this can be <b>automated with an oversight step</b>.</li>
+    <li>A <b>lean, modern static rebuild</b> would deliver near-instant load times, a contemporary feel, full ownership of the code, and reduce website-specific running costs to roughly the price of a domain.</li>
+    <li><b>The opportunity spans more than the website</b> — it covers performance, search and AI visibility, reviews, booking-workflow automation, and lead generation.</li>
+  </ul>
+
+  <!-- Summary -->
+  <h2>Summary</h2>
+  <p>The underlying business is in good health; the website and surrounding digital setup are where the gap lies. A rare combination of assets — 38 years of heritage, a 5.0-star Google rating across 512 reviews, and 4.9 stars across 195 Tripadvisor reviews — currently sits on a slow, dated WordPress site that hides its own booking button, removes one lesson page from Google, and relies on manual admin behind each booking.</p>
+  <p>The encouraging part is that the highest-value fixes are also the lowest-risk. The booking and payment system (TuriTop) is completely separate from WordPress, so it transfers to a new site untouched — the existing booking dashboard is unaffected. Most of what makes the site feel old and slow is the page-builder and caching layer that exist only to run and prop up WordPress; removing them produces a far faster, cleaner site. And the most significant growth lever is not the website itself but the review reputation, which is currently invisible to search engines because the site lacks the structured data that would surface it.</p>
+  <p>Taken together, the work divides into clear streams — a modern rebuild, conversion improvements, technical SEO and structured data, review leverage, booking-workflow automation, and lead generation — each of which stands on its own and adds measurable value.</p>
+
+  <!-- Stack -->
+  <h2>What the current site runs on</h2>
+  <table>
+    <thead><tr><th>Layer</th><th>Current</th><th>Observation</th></tr></thead>
+    <tbody>
+      <tr><td>CMS</td><td>WordPress</td><td>The platform being replaced</td></tr>
+      <tr><td>Page builder</td><td>WPBakery (js_composer)</td><td>Main source of the heavy, "templated" feel</td></tr>
+      <tr><td>Caching</td><td>WP Rocket</td><td>Present to mask WordPress load times; also delays the booking calendar</td></tr>
+      <tr><td>Images</td><td>WebP + lazy-load</td><td>Already optimised — reusable as-is</td></tr>
+      <tr><td>SEO plugin</td><td>Yoast + Yoast Local</td><td>Local SEO partly configured (geo data present)</td></tr>
+      <tr><td>Bookings + payments</td><td>TuriTop (company S559)</td><td>External, fully portable — independent of the website</td></tr>
+      <tr><td>Hosting</td><td>SiteGround (Google Cloud, Sydney)</td><td>Managed WordPress hosting</td></tr>
+      <tr><td>Domain</td><td>Registered via Tucows</td><td>Registered 2003, renews Dec 2026</td></tr>
+      <tr><td>Email</td><td>Google Workspace</td><td>Separate from hosting</td></tr>
+    </tbody>
+  </table>
+  <p>The only substantive "software" here is WordPress and the page builder. Everything else is an embed or service that moves to a new site unchanged. A hand-built, lean site is a fraction of the page weight and fully under the owner's control.</p>
+
+  <!-- Booking -->
+  <h2>The booking system</h2>
+  <p>Every page funnels to "Book Online 24/7," and that flow is handled entirely by TuriTop — a third-party booking platform with no dependency on WordPress. The customer sees a colour-coded availability calendar, a party-size selector, the ability to add multiple dates for multi-lesson courses, a gift-voucher option, and secure online payment.</p>
+  <p>On the operator side, TuriTop already provides a bookings dashboard with full customer details, automatic acknowledgement emails, scheduled reminders, payment handling, gift certificates, and staff logins. Booking management already exists and would be retained.</p>
+  <p>Two points stand out as opportunities rather than faults:</p>
+  <ul>
+    <li>The booking calendar is delayed by the caching plugin and appears only after a visitor interacts with the page; on a lighter site it would load immediately.</li>
+    <li>The lesson pages describe each lesson and its price but carry no booking widget or clear "Book" button — the calendar lives only on a separate vouchers page. Surfacing booking on every lesson page would shorten the path to purchase.</li>
+  </ul>
+
+  <!-- Page health -->
+  <h2>Page-by-page health</h2>
+  <p>The site is around 16 pages sharing a single template (header → hero → text/image blocks → map → footer).</p>
+  <table>
+    <thead><tr><th>Page</th><th>In Google?</th><th>Booking prompt?</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Home</td><td>Yes</td><td>Weak (text link)</td><td>Footer year out of date; no clear Book button near the top</td></tr>
+      <tr><td>Scarborough 2.25hr</td><td>Yes</td><td>No widget</td><td>Core page, prices shown, but no on-page booking</td></tr>
+      <tr><td>Level 1 Course</td><td>Unclear</td><td>No</td><td>Missing meta tags</td></tr>
+      <tr><td>Level 2 Course</td><td class="flag">No — noindex</td><td>No</td><td>A core page currently invisible to Google</td></tr>
+      <tr><td>Teenagers</td><td>Yes</td><td>No</td><td>Age range reads "13–99" on a teens-focused page</td></tr>
+      <tr><td>School Holiday</td><td>Yes</td><td>No</td><td>Minimum age inconsistent (11 vs 13)</td></tr>
+      <tr><td>Leighton Beach</td><td>Yes</td><td>No</td><td>Two H1 tags; "-2" in the URL; framed winter-only</td></tr>
+      <tr><td>Private Lessons</td><td>Yes</td><td>Text, no link</td><td>A time typo; age 10 vs 13 elsewhere</td></tr>
+      <tr><td>FAQ</td><td>Yes</td><td>Links out</td><td>Strong content — but no FAQ structured data</td></tr>
+      <tr><td>Blog</td><td>Yes</td><td>No</td><td>Five posts; nothing added since 2022</td></tr>
+      <tr><td>Surf Conditions</td><td>Yes</td><td>No</td><td>The richest content page on the site</td></tr>
+      <tr><td>Intermediate Lessons</td><td>Yes</td><td>No</td><td>A "blog post" doing a sales page's job; overlaps Level 2</td></tr>
+      <tr><td>Contact</td><td>Yes</td><td>Form only</td><td>Footer duplicated; references a retired URL</td></tr>
+      <tr><td>Find Us</td><td>Yes</td><td>No</td><td>Minor typo; covers only one of two locations</td></tr>
+      <tr><td>Terms / Privacy</td><td>No (correct)</td><td>—</td><td>A few typos; otherwise appropriately hidden</td></tr>
+    </tbody>
+  </table>
+  <p>Recurring themes, all straightforward to resolve in a rebuild: no clear booking prompt on the lesson pages; one core page hidden from Google; an out-of-date footer year; a dormant blog; minimum age stated inconsistently; prices duplicated across five pages; and a scatter of small typos and duplicated page elements.</p>
+
+  <!-- Strengths -->
+  <h2>Strengths worth protecting</h2>
+  <ul>
+    <li><b>Reputation:</b> 5.0 stars from 512 Google reviews and 4.9 from 195 Tripadvisor reviews — a rare asset most operators in the category cannot match.</li>
+    <li><b>Heritage:</b> "the world's oldest surf school," operating since 1986 — defensible and memorable.</li>
+    <li><b>Value proposition:</b> long 2.25-hour lessons in small groups of 4–6 — more time in the water per dollar than the common 1.5-hour competitor format.</li>
+    <li><b>Location:</b> Scarborough, one of Perth's most visited beaches, with free parking.</li>
+    <li><b>Existing free listings:</b> present on Destination Perth and displays recognised surf-school accreditation.</li>
+    <li><b>Genuine content and photography:</b> the surf-conditions and equipment pages, and the real lesson photos, are usable and worth carrying over.</li>
+  </ul>
+
+  <!-- Search/AI -->
+  <h2>Search and AI visibility</h2>
+  <p>The standout opportunity is that the review reputation is effectively invisible to search engines on the site today.</p>
+  <ul>
+    <li><b>No review or rating structured data.</b> With 512 Google and 195 Tripadvisor reviews, rating markup can place star ratings beside the listing in search results.</li>
+    <li><b>No FAQ structured data</b>, despite a genuinely useful nine-question FAQ — content that could earn space in both Google results and AI-generated answers.</li>
+    <li><b>No product or price structured data</b> on the lesson pages, despite clear pricing.</li>
+    <li><b>One core lesson page set to noindex</b>, removing it from Google entirely.</li>
+    <li><b>Local search is only half-built.</b> Geo data exists, but the Google Business Profile is under-leveraged and would benefit from photos, a booking link, and an ongoing review-request habit.</li>
+    <li><b>Speed caps performance.</b> The page-builder and caching stack limits mobile performance; a lean rebuild is the real fix.</li>
+    <li><b>AI-answer visibility follows the same work.</b> Clean, fast, well-structured pages with clear Q&amp;A and strong review signals are exactly what AI assistants draw on — so improving for Google and for AI is the same task.</li>
+  </ul>
+
+  <!-- Presence -->
+  <h2>Online presence and where the business appears</h2>
+  <table>
+    <thead><tr><th>Channel</th><th>Present?</th><th>Active?</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Own website</td><td>Yes</td><td>Partly</td><td>The booking hub, but dated and the Book prompt is hidden</td></tr>
+      <tr><td>Google Business Profile</td><td>Yes</td><td>Strong (5.0★, 512)</td><td>The best channel — and under-optimised</td></tr>
+      <tr><td>Tripadvisor</td><td>Yes</td><td>Strong (4.9★, 195, #2 of 5)</td><td>Excellent proof; not surfaced on the site</td></tr>
+      <tr><td>Destination Perth</td><td>Yes</td><td>Good</td><td>Free regional-tourism listing</td></tr>
+      <tr><td>Facebook</td><td>Yes</td><td>Unclear</td><td>Listed as publisher; activity not publicly verifiable</td></tr>
+      <tr><td>Instagram</td><td>Yes — two handles</td><td>Weak</td><td>~440 followers, split across two accounts</td></tr>
+      <tr><td>YouTube</td><td>Yes</td><td>Dormant</td><td>72 subscribers, 8 videos, nothing in ~3 years</td></tr>
+      <tr><td>Twitter/X</td><td>Linked</td><td>Dormant</td><td>No recent activity</td></tr>
+      <tr><td>Experience/gift marketplaces</td><td>No</td><td>Gap</td><td>No presence on channels best suited to passive bookings</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Competitors -->
+  <h2>Competitor context</h2>
+  <table>
+    <thead><tr><th>Operator</th><th>Where</th><th>Beginner price</th><th>Booking</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Go Surf Perth</td><td>Same beach</td><td>$55 / 1.5hr</td><td>Viking Bookings</td><td>Polished site, accredited, automated weather messaging + self-reschedule; also targets kids</td></tr>
+      <tr><td>Surfing WA Surf School</td><td>Trigg</td><td>from ~$130 private</td><td>Viking Bookings</td><td>Backed by the state body — high authority</td></tr>
+      <tr><td>Margaret River academies</td><td>Down south</td><td>$50–60</td><td>Rezdy/FareHarbor-style</td><td>Strong marketplace distribution — a useful model</td></tr>
+    </tbody>
+  </table>
+  <p>In context: pricing here is higher per ticket ($79 vs $55) but lower per hour ($35 vs $37), with smaller groups and ~50% more time in the water — a strong value story that is currently understated. Competitors' main edges are booking automation and marketplace reach, both addressable, while reviews and heritage already lead on trust.</p>
+
+  <!-- Opportunities -->
+  <h2>Opportunities — the scope of what can be improved</h2>
+  <p>The work divides into distinct streams. Each delivers value independently; together they compound.</p>
+  <h3>1. A modern, lean rebuild</h3>
+  <p>Replace WordPress and the page builder with a fast static site — near-instant load, a contemporary feel, and full ownership of the code on portable, non-proprietary foundations. Hosting moves to a free/near-free tier, cutting most current running costs.</p>
+  <h3>2. Conversion improvements</h3>
+  <p>A clear "Book" prompt on every lesson page, a booking calendar that loads instantly, and a sharper articulation of the value proposition (2.25-hour lessons, small groups, since 1986, 500+ five-star reviews) — turning more of the existing traffic into bookings.</p>
+  <h3>3. Technical SEO and structured data</h3>
+  <p>Review/rating, FAQ and product markup so search results can show star ratings and richer listings; correcting the noindex page; a complete sitemap; clean headings and metadata. This is also what positions the business well in AI-generated recommendations.</p>
+  <h3>4. Review leverage</h3>
+  <p>Optimising the Google Business Profile and introducing a simple, near-automatic review request after each lesson — compounding an already category-leading reputation and feeding it back into search ranking.</p>
+  <h3>5. Booking-workflow automation</h3>
+  <p>Reducing the manual admin behind each booking: automatically updating the daily run sheet from incoming bookings (with a review/edit step), preparing the detailed confirmation emails (including course progress) for quick approval, and automating the day-before reminders — each with an oversight option. This directly reduces time spent at the computer.</p>
+  <h3>6. Lead generation</h3>
+  <p>Listing on experience/gift marketplaces for passive, commission-based bookings; making gift vouchers prominent; and capturing not-ready-yet visitors (e.g. a simple surf-conditions email sign-up) so tourist and gift-buyer demand isn't lost.</p>
+  <h3>7. Content and housekeeping</h3>
+  <p>Consolidating overlapping pages, retiring the dormant blog into evergreen content, standardising pricing and age information to a single source, and clearing small inconsistencies — a cleaner, more trustworthy site.</p>
+  <h3>8. Social consolidation</h3>
+  <p>Resolving the duplicate Instagram handle, pointing all links to one account, and repurposing existing video — a tidier, more credible social footprint with little ongoing effort.</p>
+
+  <!-- Cost -->
+  <h2>Indicative effort and running cost</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Now (approx/yr)</th><th>After a rebuild</th></tr></thead>
+    <tbody>
+      <tr><td>Hosting</td><td>~$215–360</td><td>~$0 (static hosting free tier)</td></tr>
+      <tr><td>Caching plugin</td><td>$59</td><td>$0 (not required)</td></tr>
+      <tr><td>Page builder</td><td>one-time, ~$0 ongoing</td><td>$0</td></tr>
+      <tr><td>Booking system (TuriTop)</td><td>~$370+</td><td>~$370+ (retained)</td></tr>
+      <tr><td>Domain</td><td>~$20</td><td>~$20</td></tr>
+      <tr><td>Email (Google Workspace)</td><td>~$84 (if paid)</td><td>~$84</td></tr>
+      <tr><td><b>Website-specific running cost</b></td><td><b>~$300–400/yr</b></td><td><b>≈ $20/yr</b></td></tr>
+    </tbody>
+  </table>
+  <p>Most current spend is tied to the WordPress stack. After a rebuild, the only meaningful ongoing website cost is the booking system, which applies on any platform.</p>
+  <p>Indicative build effort: a homepage facelift is roughly half a day (already prototyped); a full static rebuild of all pages with booking embeds, structured data and redirects is in the order of a few days; a simple self-edit layer adds about a day; and the lead-generation and automation work runs partly as ongoing activity. Risk throughout is low, as the only external dependency (TuriTop) is fully portable.</p>
+
+  <!-- Open considerations -->
+  <h2>Open considerations</h2>
+  <ul>
+    <li><b>Self-editing:</b> a simple, friendly editor for occasional changes, versus changes handled on the operator's behalf — the lower-effort option suits a preference for less time at the computer.</li>
+    <li><b>Booking system:</b> retaining TuriTop (lowest-risk, familiar) and switching on more of its automation, with any change of engine treated as a separate, later decision.</li>
+    <li><b>Kids under 13:</b> whether to add an offering and page for the under-13 segment, which a nearby competitor currently owns, or remain 13+.</li>
+    <li><b>Blog:</b> retiring it and folding any useful content into permanent pages.</li>
+    <li><b>Marketplaces:</b> willingness to list on experience/gift platforms for passive, commission-based leads.</li>
+    <li><b>Email, hosting and domain:</b> retaining email and the domain as they are, and moving only the website hosting.</li>
+    <li><b>Sequencing:</b> launching the rebuilt site first, then layering the lead-generation and automation work, or running them together.</li>
+  </ul>
+
+  <!-- Appendix -->
+  <h2>Appendix</h2>
+  <p><b>Confirmed facts.</b> Booking/payments: TuriTop (company S559, service P32), an embeddable widget with no WordPress dependency. Hosting: SiteGround on Google Cloud (Sydney). Domain registrar: Tucows, registered 2003, renews Dec 2026. Email: Google Workspace. Reviews: Google 5.0★ / 512; Tripadvisor 4.9★ / 195 (#2 of 5 locally). YouTube: 72 subscribers, 8 videos, newest ~3 years old. Sitemap present at /sitemap_index.xml; robots file omits the sitemap reference.</p>
+  <p><b>Pricing on the current site.</b> Single 2.25hr lesson $79; 2-day course $150; 3-day $210; 4-day $260; 5-day $295 (valid 12 months; 24-hour cancellation). 1.5hr "give it a go" $55. Private: 1 surfer $145 up to 8 surfers $440.</p>
+  <p><b>Sources.</b> Live site (all lesson, FAQ, contact, booking and legal pages); TuriTop features and pricing; Tripadvisor listing; Go Surf Perth, Surfing WA Surf School and Margaret River academy sites; Destination Perth listing; published hosting and plugin pricing.</p>
+
+  <div class="docfoot">
+    <span>Scarborough Beach Surf School — Website &amp; Digital Presence Review</span>
+    <span>June 2026 · surfschool.com</span>
+  </div>
+
+</div>
+</body>
+</html>

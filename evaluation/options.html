@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Options - surfschool.com rebuild</title>
+<style>
+  :root{ --ink:#0c1f2c; --soft:#46586a; --sea:#0a7ea4; --sand:#f6f1e7; --line:#d8d0c2; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:#e9e6df;line-height:1.42;padding:18px}
+  .pad{max-width:780px;margin:0 auto;background:#fff;padding:38px 46px;box-shadow:0 6px 22px rgba(0,0,0,.12)}
+  .bar{display:flex;justify-content:flex-end;margin:0 auto 10px;max-width:780px}
+  .bar button{font-family:Georgia,serif;font-size:.8rem;background:var(--ink);color:#fff;border:0;border-radius:6px;padding:7px 15px;cursor:pointer}
+  h1{font-size:1.5rem;margin-bottom:3px}
+  .sub{color:var(--soft);font-size:.9rem;margin-bottom:6px;font-style:italic}
+  h2{font-size:1.1rem;margin:24px 0 6px;border-bottom:2px solid var(--ink);padding-bottom:3px}
+  h3{font-size:.98rem;margin:14px 0 2px;color:var(--sea)}
+  p,li{font-size:.9rem}
+  p{margin:5px 0}
+  ul{margin:4px 0 4px 20px}
+  li{margin:4px 0}
+  .soft{color:var(--soft);font-size:.84rem;font-style:italic}
+  .ref{background:var(--sand);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:8px 0}
+  .ref b{display:block;font-size:.95rem}
+  .ref .url{font-family:ui-monospace,monospace;font-size:.78rem;color:var(--sea);word-break:break-all}
+  table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.84rem}
+  th{background:var(--ink);color:#fff;text-align:left;padding:7px 10px;font-size:.8rem}
+  td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#faf7f0}
+  @media print{
+    @page{size:A4;margin:13mm}
+    body{background:#fff;padding:0}
+    .bar{display:none}
+    .pad{box-shadow:none;max-width:none;padding:0}
+    h2{page-break-after:avoid}
+    .ref,table{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar"><button onclick="window.print()">Print</button></div>
+
+<div class="pad">
+
+  <h1>What we can do - options</h1>
+  <p class="sub">surfschool.com rebuild + booking automation. Discussion options, not a fixed quote.</p>
+
+  <!-- ============ WEBSITE ============ -->
+  <h2>1. The website</h2>
+
+  <h3>A. Lean rebuild (recommended)</h3>
+  <p>Rebuild as a fast, hand-built static site. Near-instant load, modern feel, full ownership of the files, no WordPress and no proprietary lock-in. Keeps the TuriTop booking widget exactly as is. Hosting drops to near-zero.</p>
+
+  <h3>B. Add a self-edit layer</h3>
+  <p>On top of the rebuild, a simple editor so common changes (prices, dates, text) can be made without touching code. Optional - depends whether you want to edit yourself or have changes managed for you.</p>
+
+  <h3>C. Tidy the existing WordPress site instead</h3>
+  <p>Lower-ambition option: fix the current site in place (booking buttons, the hidden page, structured data) without a full rebuild. Cheaper now, but keeps the slow stack and the lock-in. Not recommended, but it's on the table.</p>
+
+  <!-- ============ DESIGN DIRECTIONS ============ -->
+  <h2>2. Design direction - what others do well</h2>
+  <p>Three reference sites, each strong in a different way. Worth a look to decide the feel.</p>
+
+  <div class="ref">
+    <b>M&amp;M Surf School (Seal Beach, since 1995)</b>
+    <span class="url">surfingschool.com</span>
+    <p>Clean and restrained. Big full-width photo panels, one message each, simple lesson grid. Heritage + simplicity. Closest to the genuine, established feel of an '86 brand.</p>
+  </div>
+  <div class="ref">
+    <b>Maroochy Surf School (Sunshine Coast)</b>
+    <span class="url">maroochysurfschool.com.au</span>
+    <p>Video hero, then a tiled menu of lessons each tagged with an age range and a Book button. Excellent way to present a range and segment beginners / teens / intermediate / private at a glance.</p>
+  </div>
+  <div class="ref">
+    <b>Go Surf Perth (same beach - the direct rival)</b>
+    <span class="url">gosurfperth.com</span>
+    <p>The one to answer. Their edge is depth, not looks: a huge, genuinely useful FAQ that helps them rank, plus booking automation (self-reschedule, night-before weather confirm by email + text, customer login). They also openly target kids and corporate.</p>
+  </div>
+  <p class="soft">Recommendation: M&amp;M-style restraint for the feel, Maroochy-style age-tagged lesson tiles for the range, and beat Go Surf on FAQ depth and review visibility.</p>
+
+  <!-- ============ SEO ============ -->
+  <h2>3. SEO &amp; visibility</h2>
+  <p>The reviews are the biggest untapped asset - 512 Google + 195 Tripadvisor, currently invisible to search. Priority order:</p>
+  <table>
+    <thead><tr><th>Action</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>Add review / rating structured data</td><td>Star ratings show next to the Google listing - higher click-through</td></tr>
+      <tr><td>Fix the Level 2 page (currently hidden from Google)</td><td>A core page becomes findable again - free traffic</td></tr>
+      <tr><td>FAQ + Product/price structured data</td><td>Richer search results; also what AI assistants quote</td></tr>
+      <tr><td>Re-optimise existing copy + titles per page</td><td>Each page targets the right search terms; fix thin/missing meta</td></tr>
+      <tr><td>Single source for prices &amp; ages</td><td>Ends the conflicting info across pages; cleaner, more trusted</td></tr>
+      <tr><td>Google Business Profile + review-request habit</td><td>The top channel for "surf lessons Perth" - compounds the reputation</td></tr>
+      <tr><td>301 redirects from old URLs</td><td>Carries 38 years of ranking authority to the new pages</td></tr>
+    </tbody>
+  </table>
+  <p class="soft">"Re-optimising the words as-is" is option 4 above: keep the existing content but rework headings, titles and keywords so each page ranks for what people actually search.</p>
+
+  <!-- ============ BOOKING ============ -->
+  <h2>4. Booking management</h2>
+
+  <h3>A. Automate around TuriTop (lowest risk)</h3>
+  <p>Keep TuriTop as the booking engine. Layer automation on top: new bookings auto-populate the run sheet (review/edit step), confirmation emails drafted ready to send, day-before reminders sent off the run sheet - all with your oversight.</p>
+  <p class="soft">Needs a check of what TuriTop connects to (API / webhooks / Zapier) before committing to specifics.</p>
+
+  <h3>B. Bespoke booking dashboard (the bigger option)</h3>
+  <p>A simple booking-management screen built for you: see all bookings, daily run sheet, per-student history and course progress, and send confirmations / reminders from one place. You own it and manage it. More work to build, but it's exactly your process rather than a generic tool.</p>
+
+  <h3>C. Switch booking engine</h3>
+  <p>The rival uses Viking Bookings, which does self-reschedule and automatic weather confirm/cancel by text out of the box. Only worth it if those features matter more than staying with the familiar TuriTop. A separate, later decision.</p>
+
+  <!-- ============ GROWTH IDEAS ============ -->
+  <h2>5. Extra ideas to pull in new customers</h2>
+  <p>The current site is missing a lot that people actually want before they book. These are cheap, high-appeal adds - all mobile-first.</p>
+
+  <h3>Tell the story - an "About" page</h3>
+  <p>There's no About page right now, and it's the thing people most want to see. The world's oldest surf school, family-run since 1986 - a story most competitors can't touch. Add real photos of the team and the van, a short founder story, and ideally a 60-second video. People book people, not logos.</p>
+
+  <h3>Put the reviews on the page</h3>
+  <p>512 five-star Google reviews and 195 on Tripadvisor, and not one appears on the site. Pull a rolling set of real testimonials onto the homepage and lesson pages. It's the most persuasive thing a first-timer sees, and it's already earned.</p>
+
+  <h3>Live surf + weather widget</h3>
+  <p>There's a whole Surf Conditions page but no live data. Add a simple widget showing today's Scarborough swell, wind and tide, plus a short forecast. Genuinely useful, gives people a reason to come back, and ties straight into "book an early session for the best conditions."</p>
+
+  <h3>Pull in Instagram + Facebook automatically</h3>
+  <p>The accounts are quiet and split across two Instagram handles. Two moves: consolidate to one handle, then feed that account straight onto the website so a live photo wall keeps the site looking active with no extra work. Post once, it shows everywhere - fresh social proof on autopilot.</p>
+
+  <h3>Gift vouchers, front and centre</h3>
+  <p>Big gift-buyer and tourist demand - birthdays, Christmas, Father's/Mother's Day. The rival pushes vouchers hard; the current site barely mentions them. Make them prominent and easy to buy online.</p>
+
+  <h3>Other smart, low-effort adds</h3>
+  <ul>
+    <li>Embed the existing YouTube videos properly - a lesson in action sells better than a photo</li>
+    <li>A short "what to expect / what to bring" first-timer section - removes nerves, lifts bookings</li>
+    <li>Tap-to-call and tap-for-directions buttons on mobile (most traffic is phones)</li>
+    <li>Click-to-WhatsApp or SMS for quick enquiries</li>
+    <li>Email capture ("a heads-up when conditions are good") for people not ready to book yet</li>
+    <li>Accreditation + O'Neill / Surfing Australia badges shown as trust marks</li>
+  </ul>
+  <p class="soft">All of these aim at the one goal: more new customers. Quick to add, and they make the site feel alive and trustworthy rather than static.</p>
+
+  <!-- ============ NEXT ============ -->
+  <h2>Suggested path</h2>
+  <ul>
+    <li>Lean rebuild + SEO/structured data first - fast, visible win, no risk to bookings</li>
+    <li>Then booking automation around TuriTop, with oversight</li>
+    <li>Bespoke dashboard and any engine change treated as later, separate decisions</li>
+  </ul>
+
+</div>
+</body>
+</html>
