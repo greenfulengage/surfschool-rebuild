@@ -1,0 +1,19 @@
+# 301 redirects — old WordPress URLs → new paths. Verify against sitemap_index.xml before go-live.
+/surf-lessons-scarborough-beach/    /lessons/scarborough-225/    301
+/level-1-surf-course/               /lessons/level-1-course/     301
+/level-2-surf-course/               /lessons/level-2-course/     301
+/intermediate-surf-lessons/         /lessons/level-2-course/     301
+/teenagers-surf-lessons/            /lessons/school-holidays/    301
+/school-holiday-surf-lessons/       /lessons/school-holidays/    301
+/leighton-beach-surf-lesson-2/      /lessons/leighton-beach/     301
+/private-surf-lessons/              /lessons/private/            301
+/book-prepaid-vouchers/             /lessons/                    301
+/faq/                               /faq/                        301
+/contact-surf-school/               /contact/                    301
+/find-us/                           /find-us/                    301
+/surf-conditions/                   /surf-conditions/            301
+/surfing-tips/                      /surf-conditions/            301
+/surfing-equipment/                 /surf-conditions/            301
+/blog/                              /surf-conditions/            301
+/terms-conditions/                  /terms/                      301
+/privacy-policy/                    /privacy/                    301
